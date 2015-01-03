@@ -16,7 +16,7 @@
         "php": ">=5.4",
         "axstrad/symfony-extra": "0.1.*",
         "phpunit/phpunit": "~4.1",
-        "symfony/framework-bundle": "~2.3"
+        "symfony/framework-bundle": "~2.3,<2.7.x-dev"
     },
 
     "require-dev": {
