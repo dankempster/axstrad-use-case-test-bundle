@@ -14,8 +14,7 @@
 
 namespace Axstrad\Bundle\UseCaseTestBundle\Test;
 
-use Symfony\Component\OptionsResolver\Options;
-use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+use Axstrad\Bundle\UseCaseTestBundle\Exception\PathDoesNotExistException;
 
 /**
  * Axstrad\Bundle\UseCaseTestBundle\Test\MultiUseCaseTest

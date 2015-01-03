@@ -12,8 +12,6 @@
 
 namespace Axstrad\Bundle\UseCaseTestBundle\Exception;
 
-use Exception as BaseException;
-
 /**
  * Axstrad\Bundle\UseCaseTestBundle\Exception\PathDoesNotExistException
  *
