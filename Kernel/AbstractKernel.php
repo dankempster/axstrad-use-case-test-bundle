@@ -38,6 +38,11 @@ abstract class AbstractKernel extends BaseKernel
      */
     protected $options = array();
 
+    public function getUseCase()
+    {
+        return $this->options['use_case'];
+    }
+
 
     /**
      * Class constructor
