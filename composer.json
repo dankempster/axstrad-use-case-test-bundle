@@ -1,0 +1,53 @@
+{
+    "name": "axstrad/use-case-test-bundle",
+    "type": "symfony-bundle",
+    "description": "Method to test Symfony 2 bundle in differnet use cases",
+    "keywords": ["symfony2", "testing"],
+
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dan Kempster",
+            "email": "dev@dankempster.co.uk",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "axstrad/symfony-extra": "0.1.*",
+        "phpunit/phpunit": "~4.1",
+        "symfony/framework-bundle": "~2.3"
+    },
+
+    "require-dev": {
+        "satooshi/php-coveralls": "dev-master"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "Axstrad\\Bundle\\UseCaseTestBundle\\": ""
+        }
+    },
+
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev",
+            "dev-develop": "0.2.x-dev"
+        }
+    },
+
+    "archive": {
+        "exclude": [
+            ".gitignore",
+            ".scrutinizer.yml",
+            ".travis.yml",
+            "Tests",
+            "build",
+            "phpunit.xml*",
+            "vendor"
+        ]
+    }
+}

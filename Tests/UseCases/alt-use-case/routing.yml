@@ -1,0 +1,4 @@
+app:
+    pattern: /world
+    defaults:
+        _controller: AxstradUseCaseTestBundleWorldBundle:Default:index
