@@ -1,8 +1,8 @@
 <?php
 /**
- * This file is part of the Elcodi package.
+ * This file is part of the Axstrad Library.
  *
- * Copyright (c) 2014 Elcodi.com
+ * Copyright (c) 2015 Dan Kempster
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -11,6 +11,7 @@
  *
  * @author Dan Kempster <dev@dankempster.co.uk>
  */
+
 namespace Axstrad\Bundle\UseCaseTestBundle\Test;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
