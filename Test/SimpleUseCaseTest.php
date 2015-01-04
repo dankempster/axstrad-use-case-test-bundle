@@ -74,6 +74,8 @@ abstract class SimpleUseCaseTest extends UseCaseTest
         parent::configureKernelOptions($resolver);
 
         $testInfo = self::getTestInfo();
-        $resolver->setDefault('root_dir', $testInfo['path'].DIRECTORY_SEPARATOR.'app');
+        $resolver->setDefaults(array(
+            'root_dir' => $testInfo['path'].DIRECTORY_SEPARATOR.'app',
+        ));
     }
 }

@@ -85,11 +85,13 @@ abstract class AbstractKernel extends BaseKernel
             ->setOptional(array(
                 'root_dir'
             ))
-            ->setAllowedValues(array(
-                'root_dir' => function ($value) {
-                    return empty($value) || is_dir($value);
-                }
-            ))
+            // Not Symfony 2.3 compatable
+            //
+            // ->setAllowedValues(array(
+            //     'root_dir' => function ($value) {
+            //         return empty($value) || is_dir($value);
+            //     }
+            // ))
         ;
     }
 

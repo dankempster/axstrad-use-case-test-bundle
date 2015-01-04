@@ -29,14 +29,14 @@ final class MultiUseCaseKernel extends AbstractKernel
     {
         parent::configureOptions($resolver);
 
-        $resolver->setRequired('root_dir');
-        $resolver->setDefault('root_dir',
-            function(Options $options) {
+        $resolver->setRequired(array('root_dir'));
+        $resolver->setDefaults(array(
+            'root_dir' => function(Options $options) {
                 return MultiUseCaseTest::getAbsoluteUseCasesDir().
                     DIRECTORY_SEPARATOR.
                     $options['use_case']
                 ;
-            }
-        );
+            },
+        ));
     }
 }
