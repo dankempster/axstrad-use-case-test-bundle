@@ -13,7 +13,6 @@
  */
 namespace Axstrad\Bundle\UseCaseTestBundle\Test;
 
-use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
