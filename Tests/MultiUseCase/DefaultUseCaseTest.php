@@ -6,5 +6,4 @@ namespace Axstrad\Bundle\UseCaseTestBundle\Tests\MultiUseCase;
  */
 class DefaultUseCaseTest extends UseCaseTest
 {
-    protected $useCase = 'default';
 }

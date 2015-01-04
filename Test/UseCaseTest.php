@@ -24,6 +24,11 @@ use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 class UseCaseTest extends WebTestCase
 {
     /**
+     * @var string The Use Case to use for this TestCase
+     */
+    protected static $useCase = 'default';
+
+    /**
      * Creates a Kernel.
      *
      * Available options:
@@ -71,7 +76,8 @@ class UseCaseTest extends WebTestCase
         $resolver
             ->setDefaults(array(
                 'environment' => 'test',
-                'debug' => true
+                'debug' => true,
+                'use_case' => static::$useCase,
             ))
             ->setAllowedTypes(array(
                 'debug' => 'bool',

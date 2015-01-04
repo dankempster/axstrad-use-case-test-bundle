@@ -8,16 +8,9 @@ use Axstrad\Bundle\UseCaseTestBundle\Test\MultiUseCaseTest;
  */
 abstract class UseCaseTest extends MultiUseCaseTest
 {
-    /**
-     * @var string The use case to use for this test.
-     */
-    protected $useCase;
-
     public function testIndexAction()
     {
-        $client = self::createClient(array(
-            'use_case' => $this->useCase,
-        ));
+        $client = self::createClient();
 
         $crawler = $client->request('GET', '/hello/Fabien');
 

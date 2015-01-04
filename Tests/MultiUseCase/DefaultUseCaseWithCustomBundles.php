@@ -6,8 +6,6 @@ namespace Axstrad\Bundle\UseCaseTestBundle\Tests\MultiUseCase;
  */
 class DefaultUseCaseWithCustomBundles extends DefaultUseCaseTest
 {
-    protected $useCase = 'default';
-
     /**
      */
     public static function getKernelClass()

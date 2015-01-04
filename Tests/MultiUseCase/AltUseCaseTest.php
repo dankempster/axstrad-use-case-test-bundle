@@ -8,13 +8,13 @@ use Axstrad\Bundle\UseCaseTestBundle\Test\MultiUseCaseTest;
  */
 class ExampleUseCaseTest extends MultiUseCaseTest
 {
+    protected static $useCase = 'alt-use-case';
+
     protected $client;
 
     public function setUp()
     {
-        $this->client = self::createClient(array(
-            'use_case' => 'alt-use-case',
-        ));
+        $this->client = self::createClient();
     }
 
     public function testHelloUrl404s()
