@@ -27,13 +27,6 @@ abstract class MultiUseCaseTest extends UseCaseTest
     public static $useCasesDir = 'Tests/UseCases';
 
     /**
-     */
-    protected static function getKernelClass()
-    {
-        return 'Axstrad\Bundle\UseCaseTestBundle\Kernel\MultiUseCaseKernel';
-    }
-
-    /**
      * Returns the absolure path to the UseCases.
      *
      * Appends the {@see useCaseDir use case directory} to the root of your

@@ -1,0 +1,4 @@
+app:
+    pattern: /page/{id}
+    defaults:
+        _controller: AxstradUseCaseTestBundlePageBundle:Default:index

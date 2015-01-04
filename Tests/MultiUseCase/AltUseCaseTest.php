@@ -6,7 +6,7 @@ use Axstrad\Bundle\UseCaseTestBundle\Test\MultiUseCaseTest;
 /**
  * @group functional
  */
-class ExampleUseCaseTest extends MultiUseCaseTest
+class AltUseCaseTest extends MultiUseCaseTest
 {
     protected static $useCase = 'alt-use-case';
 

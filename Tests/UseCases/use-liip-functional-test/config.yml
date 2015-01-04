@@ -1,0 +1,23 @@
+imports:
+    - { resource: "../base-config.yml" }
+
+doctrine:
+    dbal:
+        driver: pdo_sqlite
+        path: %kernel.cache_dir%/axstrad.test
+        charset:  UTF8
+    orm:
+        auto_generate_proxy_classes: true
+        # metadata_cache_driver: array
+        # query_cache_driver: array
+        # result_cache_driver: array
+        auto_mapping: true
+        mappings:
+            axstrad_content:
+                type: yml
+                prefix: Axstrad\Component\Content\Orm
+                dir: "%kernel.root_dir%/../../../vendor/axstrad/content/config/Orm"
+                alias: AxstradContent
+                is_bundle: false
+
+liip_functional_test: ~
