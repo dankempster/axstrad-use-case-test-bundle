@@ -49,7 +49,7 @@ abstract class MultiUseCaseTest extends UseCaseTest
                     "The path '%s' doesn't exist.".
                     " Which was generated from your project root (%s) and the".
                     " defined use case directory (%s). See".
-                    " Axstrad\Bundle\UseCaseTestBundle\Test\UseCaseTest::$useCasesDir",
+                    " Axstrad\Bundle\UseCaseTestBundle\Test\UseCaseTest::\$useCasesDir",
                     $path,
                     static::getPhpUnitXmlDir(),
                     static::$useCasesDir
