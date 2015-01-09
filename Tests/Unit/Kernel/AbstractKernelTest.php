@@ -1,5 +1,5 @@
 <?php
-namespace Axstrad\Bundle\UseCaseTestBundle\Tests\Unit;
+namespace Axstrad\Bundle\UseCaseTestBundle\Tests\Unit\Kernel;
 
 /**
  * @group unit
