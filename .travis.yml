@@ -1,15 +1,17 @@
 language: php
 php:
   - 5.4
-  - 5.5
-  - 5.6
+  # - 5.5
+  # - 5.6
   # - hhvm
 env:
   - SYMFONY_VERSION="2.3.*"
-  - SYMFONY_VERSION="2.4.*"
-  - SYMFONY_VERSION="2.5.*"
-  - SYMFONY_VERSION="2.6.*"
+  # - SYMFONY_VERSION="2.4.*"
+  # - SYMFONY_VERSION="2.5.*"
+  # - SYMFONY_VERSION="2.6.*"
 before_script:
+  # - composer clear-cache
+  - composer self-update
   - composer require symfony/framework-bundle:${SYMFONY_VERSION} --prefer-dist
 script:
   - php ./vendor/bin/phpunit --coverage-clover=build/logs/clover.xml
