@@ -12,7 +12,7 @@ env:
 before_script:
   # - composer clear-cache
   - composer self-update
-  - composer require symfony/framework-bundle:${SYMFONY_VERSION} --prefer-dist
+  - composer require symfony/symfony:${SYMFONY_VERSION} --prefer-dist
 script:
   - php ./vendor/bin/phpunit --coverage-clover=build/logs/clover.xml
 after_script:
