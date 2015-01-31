@@ -56,10 +56,9 @@ class AbstractKernelConstructTest extends \PHPUnit_Framework_TestCase
             array(
                 [],
                 implode(DIRECTORY_SEPARATOR, array(
-                    'AxstradUseCaseTestBundleCache',
-                    'default',
                     HttpKernel::VERSION,
-                    'test'
+                    'AxstradUseCaseTestBundleCache',
+                    'default-test'
                 ))
             ),
             array(
@@ -67,10 +66,9 @@ class AbstractKernelConstructTest extends \PHPUnit_Framework_TestCase
                     'environment' => 'test2'
                 ],
                 implode(DIRECTORY_SEPARATOR, array(
-                    'AxstradUseCaseTestBundleCache',
-                    'default',
                     HttpKernel::VERSION,
-                    'test2'
+                    'AxstradUseCaseTestBundleCache',
+                    'default-test2'
                 ))
             ),
             array(
@@ -78,10 +76,9 @@ class AbstractKernelConstructTest extends \PHPUnit_Framework_TestCase
                     'use_case' => 'example'
                 ],
                 implode(DIRECTORY_SEPARATOR, array(
-                    'AxstradUseCaseTestBundleCache',
-                    'example',
                     HttpKernel::VERSION,
-                    'test'
+                    'AxstradUseCaseTestBundleCache',
+                    'example-test'
                 ))
             ),
             array(
@@ -90,10 +87,9 @@ class AbstractKernelConstructTest extends \PHPUnit_Framework_TestCase
                     'environment' => 'test2',
                 ],
                 implode(DIRECTORY_SEPARATOR, array(
-                    'AxstradUseCaseTestBundleCache',
-                    'example',
                     HttpKernel::VERSION,
-                    'test2'
+                    'AxstradUseCaseTestBundleCache',
+                    'example-test2'
                 ))
             ),
         );

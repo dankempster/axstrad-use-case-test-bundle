@@ -74,10 +74,14 @@ trait UseCaseTestTrait
     public static function configureKernelOptions(OptionsResolverInterface $resolver)
     {
         $resolver
+            ->setRequired(array(
+                'tmp_dir',
+            ))
             ->setDefaults(array(
                 'environment' => 'test',
                 'debug' => true,
                 'use_case' => static::$useCase,
+                'tmp_dir' => static::getPhpUnitXmlDir().DIRECTORY_SEPARATOR.implode(DIRECTORY_SEPARATOR, array('build', 'tmp')),
             ))
             ->setAllowedTypes(array(
                 'debug' => 'bool',

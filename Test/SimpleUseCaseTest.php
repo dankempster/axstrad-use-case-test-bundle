@@ -77,5 +77,20 @@ abstract class SimpleUseCaseTest extends UseCaseTest
         $resolver->setDefaults(array(
             'root_dir' => $testInfo['path'].DIRECTORY_SEPARATOR.'app',
         ));
+
+        $resolver
+            ->setRequired(array(
+                'tmp_dir',
+            ))
+            ->setDefaults(array(
+                'environment' => 'test',
+                'debug' => true,
+                'use_case' => static::$useCase,
+                'tmp_dir' => static::getPhpUnitXmlDir().DIRECTORY_SEPARATOR.implode(DIRECTORY_SEPARATOR, array('build', 'tmp')),
+            ))
+            ->setAllowedTypes(array(
+                'debug' => 'bool',
+            ))
+        ;
     }
 }

@@ -78,9 +78,11 @@ abstract class AbstractKernel extends BaseKernel
         $resolver
             ->setRequired(array(
                 'use_case',
+                'tmp_dir',
             ))
             ->setDefaults(array(
                 'use_case' => 'default',
+                'tmp_dir' => sys_get_temp_dir(),
             ))
             ->setOptional(array(
                 'root_dir'
@@ -139,11 +141,10 @@ abstract class AbstractKernel extends BaseKernel
     {
         if ($this->testTempDir === null) {
             $this->testTempDir = implode(DIRECTORY_SEPARATOR, array(
-                sys_get_temp_dir(),
-                'AxstradUseCaseTestBundleCache',
-                $this->options['use_case'],
+                $this->options['tmp_dir'],
                 self::VERSION,
-                $this->getEnvironment(),
+                'AxstradUseCaseTestBundleCache',
+                $this->options['use_case'].'-'.$this->getEnvironment(),
             ));
         }
 

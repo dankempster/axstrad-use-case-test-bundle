@@ -21,7 +21,7 @@ use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 /**
  * Axstrad\Bundle\UseCaseTestBundle\Test\UseCaseTest
  */
-class UseCaseTest extends WebTestCase
+abstract class UseCaseTest extends WebTestCase
 {
     use UseCaseTestTrait;
 
