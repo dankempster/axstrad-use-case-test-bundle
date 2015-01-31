@@ -12,7 +12,8 @@
 
 namespace Axstrad\Bundle\UseCaseTestBundle\Tests\UseCases\PageBundle\Entity;
 
-use Axstrad\Component\Content\Orm\Article;
+use Axstrad\Common\Entity\IdTrait;
+use Axstrad\Component\Content\Entity\Article;
 use Axstrad\DoctrineExtensions\Sluggable\SluggableTrait;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -27,6 +28,6 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Page extends Article
 {
-
+    use IdTrait;
 }
 

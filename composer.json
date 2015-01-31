@@ -14,14 +14,14 @@
     ],
     "require": {
         "php": ">=5.4",
-        "axstrad/common": "~0.1.0",
-        "axstrad/symfony-extra": "~0.1.0",
+        "axstrad/common": ">=0.2.x-dev",
+        "axstrad/symfony-extra": ">=0.1.x-dev",
         "phpunit/phpunit": "~4",
         "symfony/symfony": ">=2.3 <2.7.x-dev"
     },
 
     "require-dev": {
-        "axstrad/content": "~0.1.0",
+        "axstrad/content": "0.4.x-dev",
         "doctrine/orm": "~2.3",
         "doctrine/doctrine-bundle": "~1.2",
         "doctrine/doctrine-fixtures-bundle": "~2.2",
