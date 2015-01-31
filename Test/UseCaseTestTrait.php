@@ -39,7 +39,7 @@ trait UseCaseTestTrait
      *
      * @param array $options An array of options
      *
-     * @return Kernel A Kernel instance
+     * @return \Symfony\Component\HttpKernel\Kernel A Kernel instance
      */
     protected static function createKernel(array $options = array())
     {
