@@ -15,7 +15,7 @@ class UseLiipFunctionalTest extends WebTestCase
 
     protected static $useCase = 'use-liip-functional-test';
 
-    public function testKernelIsUseCaseCompatable()
+    public function testKernelIsUseCaseCompatible()
     {
         $this->assertInstanceOf(
             'Axstrad\Bundle\UseCaseTestBundle\Kernel\MultiUseCaseKernel',
@@ -24,7 +24,7 @@ class UseLiipFunctionalTest extends WebTestCase
     }
 
     /**
-     * @depends testKernelIsUseCaseCompatable
+     * @depends testKernelIsUseCaseCompatible
      */
     public function testUseCaseIsSet()
     {
