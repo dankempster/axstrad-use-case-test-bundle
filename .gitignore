@@ -2,3 +2,8 @@ build/
 vendor/
 phpunit.xml
 composer.lock
+
+.idea/workspace.xml
+.idea/dataSources.xml
+.idea/sqlDataSources.xml
+.idea/dynamic.xml

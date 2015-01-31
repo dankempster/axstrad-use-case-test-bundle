@@ -5,6 +5,7 @@ use Axstrad\Bundle\UseCaseTestBundle\Test\MultiUseCaseTest;
 
 /**
  * @group functional
+ * @group multi-use-cases
  */
 class AltUseCaseTest extends MultiUseCaseTest
 {

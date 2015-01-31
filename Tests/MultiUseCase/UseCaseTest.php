@@ -4,7 +4,6 @@ namespace Axstrad\Bundle\UseCaseTestBundle\Tests\MultiUseCase;
 use Axstrad\Bundle\UseCaseTestBundle\Test\MultiUseCaseTest;
 
 /**
- * @group functional
  */
 abstract class UseCaseTest extends MultiUseCaseTest
 {

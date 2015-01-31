@@ -6,6 +6,8 @@ use Liip\FunctionalTestBundle\Test\WebTestCase;
 
 /**
  * Axstrad\Bundle\UseCaseTestBundle\Tests\MultiUseCase\UseLiipFunctionalTest
+ *
+ * @functional
  */
 class UseLiipFunctionalTest extends WebTestCase
 {
