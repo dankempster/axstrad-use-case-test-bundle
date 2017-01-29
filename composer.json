@@ -16,7 +16,7 @@
         "php": ">=5.4",
         "axstrad/common": ">=0.2.x-dev",
         "axstrad/symfony-extra": ">=0.1.x-dev",
-        "symfony/symfony": ">=2.3 <2.8.x-dev"
+        "symfony/symfony": "~2.3"
     },
 
     "require-dev": {
