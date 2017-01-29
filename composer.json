@@ -19,7 +19,7 @@
     },
 
     "require-dev": {
-        "axstrad/content": "0.4.x-dev",
+        "axstrad/content": ">=0.4.x-dev",
         "axstrad/common": ">=0.2.x-dev",
         "doctrine/orm": "~2.3",
         "doctrine/doctrine-bundle": "~1.2",
