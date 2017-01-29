@@ -4,9 +4,29 @@ php:
   - 5.5
   - 5.6
 env:
-  - SYMFONY_VERSION="2.3.*"
-  - SYMFONY_VERSION="2.7.*"
-  - SYMFONY_VERSION="2.8.*"
+  - SYMFONY_VERSION="2.8.*" # 11/2018
+matrix:
+  fast_finish: true
+  include:
+    # Test lowest level dependencies are correct
+    - php: 5.4
+      env: LOWEST=1
+
+    # Symfony LTS versions on lowest PHP
+    - php: 5.4
+      env: SYMFONY_VERSION="2.7.*" # 05/2018
+
+    # Old LTS I still want to support
+    - php: 5.4
+      env: SYMFONY_VERSION="2.3.*" # 05/2016
+
+    # Old noo-LTS I still want to support
+    - php: 5.4
+      env: SYMFONY_VERSION="2.4.*"
+    - php: 5.4
+      env: SYMFONY_VERSION="2.5.*"
+    - php: 5.4
+      env: SYMFONY_VERSION="2.6.*"
 
 cache:
   directories:
@@ -16,7 +36,10 @@ cache:
 before_install:
   - echo "memory_limit=2560M" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
 install:
-  - composer require symfony/symfony:${SYMFONY_VERSION} --prefer-dist
+  # Install lowest stable dependencies
+  - if [[ "$LOWEST" = "1" ]]; then composer update -n --prefer-dist --prefer-lowest --prefer-stable; fi
+  # Install a particular Symfony version
+  - if [[ ! -z "$SYMFONY_VERSION" ]]; then composer require symfony/symfony:${SYMFONY_VERSION} -n --prefer-dist; fi
 
 # Run Tests
 script:
@@ -29,26 +52,6 @@ after_script:
   - php ocular.phar code-coverage:upload --format=php-clover  build/logs/clover.xml
   - wget https://github.com/satooshi/php-coveralls/releases/download/v1.0.0/coveralls.phar
   - travis_retry php coveralls.phar
-
-# Build Matrix
-matrix:
-  fast_finish: true
-  include:
-    - php: 5.4
-      env: SYMFONY_VERSION="2.4.*"
-    - php: 5.4
-      env: SYMFONY_VERSION="2.5.*"
-    - php: 5.4
-      env: SYMFONY_VERSION="2.6.*"
-
-    - php: 7.0
-      env: SYMFONY_VERSION="2.8.*"
-    - php: 7.1
-      env: SYMFONY_VERSION="2.8.*"
-    - php: 7.1
-      env: SYMFONY_VERSION="3.0.*"
-  allow_failures:
-    - env: SYMFONY_VERSION="3.0.*"
 
 notifications:
   email:
