@@ -1,7 +1,7 @@
 {
     "name": "axstrad/use-case-test-bundle",
     "type": "symfony-bundle",
-    "description": "Method to test Symfony 2 bundle in differnet use cases",
+    "description": "Method to test Symfony 2 bundle in different use cases",
     "keywords": ["symfony2", "testing"],
 
     "license": "MIT",
