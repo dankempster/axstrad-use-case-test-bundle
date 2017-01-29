@@ -15,7 +15,7 @@
 namespace Axstrad\Bundle\UseCaseTestBundle\Test;
 
 use Axstrad\Bundle\UseCaseTestBundle\Exception\BadMethodCallException;
-use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
 
 /**
  * Axstrad\Bundle\UseCaseTestBundle\Test\SimpleUseCaseTest
@@ -66,10 +66,10 @@ abstract class SimpleUseCaseTest extends UseCaseTest
     /**
      * Define this method to configure the OptionsResolver.
      *
-     * @param  OptionsResolverInterface $resolver
+     * @param  OptionsResolver $resolver
      * @return void
      */
-    public static function configureKernelOptions(OptionsResolverInterface $resolver)
+    public static function configureKernelOptions(OptionsResolver $resolver)
     {
         parent::configureKernelOptions($resolver);
 

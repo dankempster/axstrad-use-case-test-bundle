@@ -14,7 +14,7 @@ class ConfigureOptionsTest extends \PHPUnit_Framework_TestCase
     public function setUp()
     {
         $this->mockResolver = $this->getMockForAbstractClass(
-            'Symfony\Component\OptionsResolver\OptionsResolverInterface'
+            'Symfony\Component\OptionsResolver\OptionsResolver'
         );
         $this->mockResolver
             ->expects($this->any())

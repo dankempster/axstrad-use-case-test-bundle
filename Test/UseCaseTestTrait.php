@@ -14,7 +14,6 @@
 namespace Axstrad\Bundle\UseCaseTestBundle\Test;
 
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 /**
  * Axstrad\Bundle\UseCaseTestBundle\Test\UseCaseTestTrait
@@ -68,10 +67,10 @@ trait UseCaseTestTrait
     /**
      * Define this method to configure the OptionsResolver.
      *
-     * @param  OptionsResolverInterface $resolver
+     * @param  OptionsResolver $resolver
      * @return void
      */
-    public static function configureKernelOptions(OptionsResolverInterface $resolver)
+    public static function configureKernelOptions(OptionsResolver $resolver)
     {
         $resolver
             ->setRequired(array(

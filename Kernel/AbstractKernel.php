@@ -18,7 +18,6 @@ use Axstrad\Bundle\UseCaseTestBundle\Test\MultiUseCaseTest;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\HttpKernel\Kernel as BaseKernel;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 /**
  * Axstrad\Bundle\UseCaseTestBundle\Kernel\AbstractKernel
@@ -73,7 +72,7 @@ abstract class AbstractKernel extends BaseKernel
      * Configures $resolver for the $options passed to the {@see __construct
      * constructor}.
      */
-    public static function configureOptions(OptionsResolverInterface $resolver)
+    public static function configureOptions(OptionsResolver $resolver)
     {
         $resolver
             ->setRequired(array(

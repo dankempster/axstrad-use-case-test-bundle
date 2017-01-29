@@ -16,7 +16,7 @@ namespace Axstrad\Bundle\UseCaseTestBundle\Kernel;
 
 use Axstrad\Bundle\UseCaseTestBundle\Test\MultiUseCaseTest;
 use Symfony\Component\OptionsResolver\Options;
-use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
 
 /**
  * Axstrad\Bundle\UseCaseTestBundle\Kernel\MultiUseCaseKernel
@@ -25,7 +25,7 @@ final class MultiUseCaseKernel extends AbstractKernel
 {
     /**
      */
-    public static function configureOptions(OptionsResolverInterface $resolver)
+    public static function configureOptions(OptionsResolver $resolver)
     {
         parent::configureOptions($resolver);
 
