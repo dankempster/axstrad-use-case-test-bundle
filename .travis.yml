@@ -42,6 +42,10 @@ matrix:
       env: SYMFONY_VERSION="2.8.*"
     - php: 7.1
       env: SYMFONY_VERSION="2.8.*"
+    - php: 7.1
+      env: SYMFONY_VERSION="3.0.*"
+  allow_failures:
+    - env: SYMFONY_VERSION="3.0.*"
 
 notifications:
   email:
